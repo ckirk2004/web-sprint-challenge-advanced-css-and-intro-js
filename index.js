@@ -254,9 +254,11 @@ console.log(getArtistByIndex(artists, 0));
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born in and died in 20th century (1900-2000) example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(/* Code here */) {
-	/* Code here */
-}
+// function get20s(lifespan) {
+// 	for (i = 0; i < artists.length; i++){
+//     if (artists[i].years > )
+//   }
+// }
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
  *     (1) artists array
@@ -268,9 +270,13 @@ function get20s(/* Code here */) {
  *
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.
  */
-function removeArtist(/*code here*/) {
-	/* code here */
+function removeArtist(array, index) {
+	let remove = array.indexOf(index);
+	array.splice(remove, 1);
+	console.log(array.length);
 }
+
+removeArtist(artists, 0);
 
 /**
 /* Task 6: Create a function called `addArtist` that can accept an object of information and add it to the artists array. Then, add a 21st artist to the array (you) with custom information!👩‍🎨👨‍🎨
@@ -285,9 +291,21 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/* Code here */) {
-	/* Code here */
+const me = {
+	id: 20,
+	name: 'Corey Kirk',
+	years: '1986 - Current',
+	genre: 'Web Design',
+	nationality: 'American',
+	bio:
+		'"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+};
+
+function addArtist(newArtist) {
+	artists.push(newArtist);
+	return artists;
 }
+console.log(addArtist(me));
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
